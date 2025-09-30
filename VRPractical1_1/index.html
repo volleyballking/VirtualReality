@@ -4,113 +4,142 @@
   </head>
   <body>
     <a-scene>
-      <!-- FIRST CAR -->
-      <a-box wireframe="true" height="3" width="4" depth="3" position="0 0 0">
-        <!-- Car body -->
-        <a-box position="0 0 0" width="4" height="1.5" depth="3" color="#C00000"></a-box>
-        <a-box position="0 .5 -1.5" width=".5" height=".2" depth=".2" color="#8B0000"></a-box>
-        <a-box position="0 .5 1.5" width=".5" height=".2" depth=".2" color="#8B0000"></a-box>
-        <a-box position="2 0 0" rotation ="0 90 0" width="2" height="1" depth=".2" color="#A9A9A9"></a-box>
-        <!-- Car hood -->
-        <a-box position="1 0.3 0" width="2" height="0.6" depth="3" color="#C00000"></a-box>
-        <!-- Windshield -->
-        <a-cylinder position="0 .75 0" width="3" height="2.5" radius="1.5" color="#ADD8E6" rotation="90 0 0"></a-cylinder>
-        <a-cylinder position=".0 .9 0" width="3" height="2.48" radius="1.4" color="#8B0000" rotation="90 0 0"></a-cylinder>
-        <!-- Left side detail -->
-        <a-box position="-2 0.8 0" width="0.2" height="0.2" depth="2" color="#C00000"></a-box>
-        <a-box position="-2.3 1 0" width="0.6" height="0.1" depth="2.5" color="#C00000"></a-box>
-        <!-- Right side detail -->
-        <a-box position="2.1 -0.3 0" width="0.4" height="0.6" depth="3.2" color="#800000"></a-box>
-        <!-- Roof details -->
-        <a-box position="0.8 1 1.2" width="0.2" height="0.2" depth="0.6" color="#800000"></a-box>
-        <a-box position="0.8 1 -1.2" width="0.2" height="0.2" depth="0.6" color="#800000"></a-box>
-        <!-- Wheels -->
-        <a-cylinder position="-1.5 -1 -1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="-1.5 -1 -1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <a-cylinder position="-1.5 -1 1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="-1.5 -1 1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <a-cylinder position="1.5 -1 -1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="1.5 -1 -1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <a-cylinder position="1.5 -1 1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="1.5 -1 1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <!-- Headlights -->
-        <a-sphere position="2.1 0 0.9" radius="0.3" color="#FFFF99"></a-sphere>
-        <a-sphere position="2.1 0 -0.9" radius="0.3" color="#FFFF99"></a-sphere>
-        <!-- Tail lights -->
-        <a-box position="-2 0 0.9" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
-        <a-box position="-2 0 -0.9" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
+      <!-- ENVIRONMENT -->
+      <a-sky src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg"></a-sky>
+      <a-plane position="0 -1.5 0" rotation="-90 0 0" width="100" height="100" src="https://cdn.aframe.io/a-painter/images/floor.jpg"></a-plane>
 
-        <!-- Environment for first car -->
-        <a-sky src="https://img.freepik.com/premium-vector/tropical-summer-beach-ocean-sunset-sunrise-view-cartoon-illustration-summer-holidays-vacation_884500-37100.jpg"></a-sky>
-        <a-plane position="0 -1.5 0" rotation="-90 0 0" width="40" height="40" src="https://cdn.aframe.io/a-painter/images/floor.jpg"></a-plane>
+      <!-- FIRST CAR (SPORTS STYLE) -->
+      <a-entity position="0 0 0">
+        <!-- Body -->
+        <a-box position="0 0 0" width="4" height="1.2" depth="2.5" color="#C00000"></a-box>
+        <!-- Hood & spoiler -->
+        <a-box position="1 0.4 0" width="2" height="0.5" depth="2.5" color="#FF3333"></a-box>
+        <a-box position="-2 1 0" width="0.3" height="0.2" depth="2" color="#111"></a-box>
+        <!-- Windshield -->
+        <a-box position="0 0.9 0" width="2" height="0.6" depth="2" color="#87CEEB" opacity="0.8"></a-box>
+        <!-- Wheels -->
+        <a-cylinder position="-1.5 -0.8 -1.2" radius="0.6" height="0.4" rotation="90 0 0" color="black"></a-cylinder>
+        <a-cylinder position="-1.5 -0.8 1.2" radius="0.6" height="0.4" rotation="90 0 0" color="black"></a-cylinder>
+        <a-cylinder position="1.5 -0.8 -1.2" radius="0.6" height="0.4" rotation="90 0 0" color="black"></a-cylinder>
+        <a-cylinder position="1.5 -0.8 1.2" radius="0.6" height="0.4" rotation="90 0 0" color="black"></a-cylinder>
+      </a-entity>
+
+      <!-- SECOND CAR (SUV STYLE) -->
+      <a-entity position="7 0 -6" rotation="0 240 0">
+        <!-- Body -->
+        <a-box position="0 0 0" width="4.5" height="2" depth="3" color="#06402B"></a-box>
+        <!-- Roof rack -->
+        <a-box position="0 1.3 0" width="3" height="0.2" depth="2" color="#222"></a-box>
+        <!-- Windshield -->
+        <a-box position="0 1.1 0" width="2.5" height="0.8" depth="2.2" color="#87CEEB" opacity="0.8"></a-box>
+        <!-- Wheels -->
+        <a-cylinder position="-1.8 -1 -1.3" radius="0.7" height="0.4" rotation="90 0 0" color="black"></a-cylinder>
+        <a-cylinder position="-1.8 -1 1.3" radius="0.7" height="0.4" rotation="90 0 0" color="black"></a-cylinder>
+        <a-cylinder position="1.8 -1 -1.3" radius="0.7" height="0.4" rotation="90 0 0" color="black"></a-cylinder>
+        <a-cylinder position="1.8 -1 1.3" radius="0.7" height="0.4" rotation="90 0 0" color="black"></a-cylinder>
+      </a-entity>
+
+      <!-- THIRD CAR (FUTURISTIC STYLE) -->
+      <a-entity position="7 0 6" rotation="0 150 0">
+        <!-- Body (rounded using cylinders & spheres) -->
+        <a-cylinder position="0 0 0" height="1.5" radius="2" color="#0D3AA9"></a-cylinder>
+        <a-sphere position="0 0.9 0" radius="2" scale="1 0.5 1" color="#1E90FF"></a-sphere>
+        <!-- Cockpit -->
+        <a-sphere position="0 1.2 0" radius="1.2" color="#87CEEB" opacity="0.6"></a-sphere>
+        <!-- Wheels (glowing hover style) -->
+        <a-torus position="-2 -0.5 -1" radius="0.8" radius-tubular="0.2" rotation="90 0 0" color="#FFD700"></a-torus>
+        <a-torus position="-2 -0.5 1" radius="0.8" radius-tubular="0.2" rotation="90 0 0" color="#FFD700"></a-torus>
+        <a-torus position="2 -0.5 -1" radius="0.8" radius-tubular="0.2" rotation="90 0 0" color="#FFD700"></a-torus>
+        <a-torus position="2 -0.5 1" radius="0.8" radius-tubular="0.2" rotation="90 0 0" color="#FFD700"></a-torus>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
+✅ Changes Made:
+Car 1 (Red Sports Car): Sleeker, lower, spoiler on back.
+
+Car 2 (Green SUV): Taller, bulkier, roof rack.
+
+Car 3 (Blue Futuristic Car): Rounded body, cockpit dome, glowing hover wheels.
+
+New Background: City panorama + large floor plane.
+
+Do you want me to also add animation (like cars rotating or wheels spinning), or keep them static?
+
+
+
+
+
+
+
+You said:
+dont use anything i havent used 
+
+
+ChatGPT said:
+Got it ✅ — I’ll stick strictly to the A-Frame primitives you already used (a-box, a-cylinder, a-sphere, a-plane, a-sky) and just rearrange them to make the cars look more different, while also giving you a new background.
+
+Here’s a cleaned-up version with 3 distinct cars and a different sky/floor:
+
+html
+Copy code
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- ENVIRONMENT -->
+      <a-sky src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/chesapeake-bay.jpg"></a-sky>
+      <a-plane position="0 -1.5 0" rotation="-90 0 0" width="80" height="80" color="#4d4d4d"></a-plane>
+
+      <!-- FIRST CAR (RED - SPORTY) -->
+      <a-box position="0 0 0">
+        <!-- Body -->
+        <a-box position="0 0 0" width="4" height="1" depth="2.5" color="#C00000"></a-box>
+        <!-- Hood -->
+        <a-box position="1 0.3 0" width="1.5" height="0.5" depth="2.5" color="#8B0000"></a-box>
+        <!-- Windshield -->
+        <a-box position="0 0.9 0" width="2" height="0.6" depth="2" color="#ADD8E6"></a-box>
+        <!-- Spoiler -->
+        <a-box position="-2 1 0" width="0.2" height="0.3" depth="2" color="#800000"></a-box>
+        <!-- Wheels -->
+        <a-cylinder position="-1.5 -0.8 -1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+        <a-cylinder position="-1.5 -0.8 1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+        <a-cylinder position="1.5 -0.8 -1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+        <a-cylinder position="1.5 -0.8 1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
       </a-box>
 
-      <!-- SECOND CAR -->
-     <a-box wireframe="true" height="3" width="4" depth="3" position="7 0 -6" rotation="0 250 0">
-        <!-- Car body -->
-        <a-box position="0 0 0" width="4" height="1.5" depth="3" color="#06402B"></a-box>
-        <a-box position="0 .5 -1.5" width=".5" height=".2" depth=".2" color="#2E6F40"></a-box>
-        <a-box position="0 .5 1.5" width=".5" height=".2" depth=".2" color="#2E6F40"></a-box>
-        <a-box position="2 0 0" rotation ="0 90 0" width="2" height="1" depth=".2" color="#A9A9A9"></a-box>
+      <!-- SECOND CAR (GREEN - SUV STYLE) -->
+      <a-box position="7 0 -6" rotation="0 250 0">
+        <!-- Body -->
+        <a-box position="0 0 0" width="4.5" height="1.8" depth="3" color="#06402B"></a-box>
+        <!-- Roof -->
+        <a-box position="0 1.2 0" width="3.5" height="0.3" depth="2.5" color="#2E6F40"></a-box>
         <!-- Windshield -->
-        <a-cylinder position="0 .75 0" width="3" height="2.5" radius="1.5" color="#ADD8E6" rotation="90 0 0"></a-cylinder>
-        <a-cylinder position=".0 .9 0" width="3" height="2.48" radius="1.4" color="#2E6F40" rotation="90 0 0"></a-cylinder>
-        <!-- Left side detail -->
-        <a-box position="-2 0.8 0" width="0.2" height="0.2" depth="2" color="#2E6F40"></a-box>
-        <a-box position="-2.3 1 0" width="0.6" height="0.1" depth="2.5" color="#2E6F40"></a-box>
-        <!-- Right side detail -->
-        <a-box position="2 -0.3 0" width="0.4" height=".6" depth="3.2" color="#2E6F40"></a-box>
-        
-        <a-box position="0.8 1 1.2" width ="0.2" height="0.2" depth="0.6" color="#2E6F40"></a-box>
-        <a-box position="0.8 1 -1.2" width ="0.2" height="0.2" depth="0.6" color="#2E6F40"></a-box>
+        <a-box position="0 1 0" width="2.5" height="0.7" depth="2.2" color="#ADD8E6"></a-box>
         <!-- Wheels -->
-        <a-cylinder position="-1.5 -1 -1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="-1.5 -1 -1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <a-cylinder position="-1.5 -1 1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="-1.5 -1 1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <a-cylinder position="1.5 -1 -1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="1.5 -1 -1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <a-cylinder position="1.5 -1 1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="1.5 -1 1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <!-- Headlights -->
-        <a-sphere position="2.1 0 0.9" radius="0.3" color="#FFFF99"></a-sphere>
-        <a-sphere position="2.1 0 -0.9" radius="0.3" color="#FFFF99"></a-sphere>
-        <!-- Tail lights -->
-        <a-box position="-2 0 0.9" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
-        <a-box position="-2 0 -0.9" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
+        <a-cylinder position="-1.8 -1 -1.3" radius="0.7" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+        <a-cylinder position="-1.8 -1 1.3" radius="0.7" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+        <a-cylinder position="1.8 -1 -1.3" radius="0.7" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+        <a-cylinder position="1.8 -1 1.3" radius="0.7" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
       </a-box>
 
-    <a-box wireframe="true" height="3" width="4" depth="3" position="7 0 6" rotation="0 150 0">
-        <!-- Car body -->
+      <!-- THIRD CAR (BLUE - BOXIER LOOK) -->
+      <a-box position="7 0 6" rotation="0 150 0">
+        <!-- Body -->
         <a-box position="0 0 0" width="4" height="1.5" depth="3" color="#0D3AA9"></a-box>
-        <a-box position="0 .5 -1.5" width=".5" height=".2" depth=".2" color="#00008B"></a-box>
-        <a-box position="0 .5 1.5" width=".5" height=".2" depth=".2" color="#00008B"></a-box>
-        <a-box position="2 0 0" rotation ="0 90 0" width="2" height="1" depth=".2" color="#A9A9A9"></a-box>
+        <!-- Cabin -->
+        <a-box position="0 1 0" width="3" height="1" depth="2" color="#00008B"></a-box>
         <!-- Windshield -->
-        <a-cylinder position="0 .75 0" width="3" height="2.5" radius="1.5" color="#ADD8E6" rotation="90 0 0"></a-cylinder>
-        <a-cylinder position=".0 .9 0" width="3" height="2.48" radius="1.4" color="#00008B" rotation="90 0 0"></a-cylinder>
-        <!-- Left side detail -->
-        <a-box position="-2 0.8 0" width="0.2" height="0.2" depth="2" color="#00008B"></a-box>
-        <a-box position="-2.3 1 0" width="0.6" height="0.1" depth="2.5" color="#00008B"></a-box>
-        <!-- Right side detail -->
-        <a-box position="2 -0.3 0" width="0.4" height=".6" depth="3.2" color="#00008B"></a-box>
-        
-        <a-box position="0.8 1 1.2" width ="0.2" height="0.2" depth="0.6" color="#00008B"></a-box>
-        <a-box position="0.8 1 -1.2" width ="0.2" height="0.2" depth="0.6" color="#00008B"></a-box>
+        <a-box position="0 1.3 0" width="2" height="0.7" depth="1.5" color="#ADD8E6"></a-box>
         <!-- Wheels -->
-        <a-cylinder position="-1.5 -1 -1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="-1.5 -1 -1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <a-cylinder position="-1.5 -1 1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="-1.5 -1 1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <a-cylinder position="1.5 -1 -1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="1.5 -1 -1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <a-cylinder position="1.5 -1 1.5" radius="0.6" height="0.4" rotation="90 0 0" color="#000000"></a-cylinder>
-        <a-cylinder position="1.5 -1 1.5" radius="0.3" height="0.45" rotation="90 0 0" color="#818589"></a-cylinder>
-        <!-- Headlights -->
-        <a-sphere position="2.1 0 0.9" radius="0.3" color="#FFFF99"></a-sphere>
-        <a-sphere position="2.1 0 -0.9" radius="0.3" color="#FFFF99"></a-sphere>
-        <!-- Tail lights -->
-        <a-box position="-2 0 0.9" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
-        <a-box position="-2 0 -0.9" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
-    </a-box>
-    </body>
+        <a-cylinder position="-1.5 -0.8 -1.3" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+        <a-cylinder position="-1.5 -0.8 1.3" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+        <a-cylinder position="1.5 -0.8 -1.3" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+        <a-cylinder position="1.5 -0.8 1.3" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+      </a-box>
+    </a-scene>
+  </body>
+</html>
