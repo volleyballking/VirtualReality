@@ -4,41 +4,31 @@
   </head>
   <body>
     <a-scene>
-      <a-entity class="room">
-            <a-entity class="wall">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-            <a-entity class="wall" position="0 0 -6">
-                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
-                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
-                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
-            </a-entity>
-      </a-entity>
-
+      <a-cylinder 
+        position="0 1 0" 
+        radius="1" 
+        height="2" 
+        color="#eee8d3">
+      </a-cylinder>
       
-
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <!-- Mushroom cap -->
+      <a-sphere 
+        position="0 3 0" 
+        radius="2" 
+        color="#d62828" 
+        segments-width="32" 
+        segments-height="16" 
+        theta-start="0" 
+        theta-length="180">
+      </a-sphere>
+      
+      <!-- White spots on cap -->
+      <a-sphere position="0.7 3.5 0.5" radius="0.3" color="#fff"></a-sphere>
+      <a-sphere position="-0.8 3.6 -0.3" radius="0.25" color="#fff"></a-sphere>
+      <a-sphere position="0.2 3.7 -1.5" radius="0.35" color="#fff"></a-sphere>
+      
+      <!-- Door -->
+      <a-box position="0 0.75 1" height="1.5" width="1" depth="0.1" color="#654321"></a-box>
     </a-scene>
   </body>
 </html>
