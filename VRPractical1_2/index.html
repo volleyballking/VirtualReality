@@ -4,31 +4,39 @@
   </head>
   <body>
     <a-scene>
-      <a-cylinder 
-        position="0 1 0" 
-        radius="1" 
-        height="2" 
-        color="#eee8d3">
-      </a-cylinder>
+      <a-box position="0 0 0" width="20" height="0.1" depth="20" color="#7CFC00"></a-box>
+      
+      <!-- Mushroom stem -->
+      <a-box position="0 1.5 0" width="2" height="3" depth="2" color="#eee8d3"></a-box>
       
       <!-- Mushroom cap -->
-      <a-sphere 
-        position="0 3 0" 
-        radius="2" 
-        color="#d62828" 
-        segments-width="32" 
-        segments-height="16" 
-        theta-start="0" 
-        theta-length="180">
-      </a-sphere>
-      
-      <!-- White spots on cap -->
-      <a-sphere position="0.7 3.5 0.5" radius="0.3" color="#fff"></a-sphere>
-      <a-sphere position="-0.8 3.6 -0.3" radius="0.25" color="#fff"></a-sphere>
-      <a-sphere position="0.2 3.7 -1.5" radius="0.35" color="#fff"></a-sphere>
+      <a-sphere position="0 4.7 0" radius="2.5" color="#d62828"></a-sphere>
       
       <!-- Door -->
-      <a-box position="0 0.75 1" height="1.5" width="1" depth="0.1" color="#654321"></a-box>
+      <a-box position="0 0.75 1.01" width="1" height="1.5" depth="0.1" color="#654321"></a-box>
+
+
+      <a-box position="5 0 5" width="20" height="0.1" depth="20" color="#7CFC00"></a-box>
+      
+<!-- Mushroom stem -->
+<a-box position="5 1.5 5" width="2" height="3" depth="2" color="#eee8d3"></a-box>
+      
+<!-- Mushroom cap -->
+<a-sphere position="5 4.7 5" radius="2.5" color="#d62828"></a-sphere>
+      
+<!-- Door -->
+<a-box position="5 0.75 6.01" width="1" height="1.5" depth="0.1" color="#654321"></a-box>
+      
+      
+
+
+
+
+      
+      
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
 </html>
