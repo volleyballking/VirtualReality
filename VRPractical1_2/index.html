@@ -4,85 +4,75 @@
   </head>
   <body>
     <a-scene>
-      
-      <!-- Mushroom stem -->
+
+      <!-- Original Mushroom Houses -->
+      <!-- Mushroom 1 -->
       <a-box position="0 1.5 0" width="2" height="3" depth="2" src="stem.png"></a-box>
-      
-      <!-- Mushroom cap -->
       <a-sphere position="0 4.7 0" radius="2.5" src="loa.png" ></a-sphere>
-      
-      <!-- Door -->
       <a-box position="0 0.75 1.01" width="1" height="1.5" depth="0.1" src="door.png"></a-box>
 
+      <!-- Mushroom 2 -->
+      <a-box position="5 1.5 5" width="2" height="3" depth="2" src="stem.png"></a-box>
+      <a-sphere position="5 4.7 5" radius="2.5" src="green.png"></a-sphere>
+      <a-box position="5 0.75 6.01" width="1" height="1.5" depth="0.1" src="door.png"></a-box>
 
-       <a-box position="-10 1.5 12" width="2" height="3" depth="2" src="stem.png"></a-box>
+      <!-- Mushroom 3 -->
+      <a-box position="-3 1.5 8" width="2" height="3" depth="2" src="stem.png"></a-box>
+      <a-sphere position="-3 4.7 8" radius="2.5" src="mush.png"></a-sphere>
+      <a-box position="-3 0.75 9.01" width="1" height="1.5" depth="0.1" src="door.png"></a-box>
+
+      <!-- DUPLICATES -->
+      <!-- Mushroom 4 -->
+      <a-box position="-10 1.5 12" width="2" height="3" depth="2" src="stem.png"></a-box>
       <a-sphere position="-10 4.7 12" radius="2.5" src="green.png"></a-sphere>
       <a-box position="-10 0.75 13.01" width="1" height="1.5" depth="0.1" src="door.png"></a-box>
 
+      <!-- Mushroom 5 -->
+      <a-box position="12 1.5 10" width="2" height="3" depth="2" src="stem.png"></a-box>
+      <a-sphere position="12 4.7 10" radius="2.5" src="mush.png"></a-sphere>
+      <a-box position="12 0.75 11.01" width="1" height="1.5" depth="0.1" src="door.png"></a-box>
 
-      
-<!-- Mushroom stem -->
-<a-box position="5 1.5 5" width="2" height="3" depth="2" src="stem.png"></a-box>
-      
-<!-- Mushroom cap -->
-<a-sphere position="5 4.7 5" radius="2.5" src="green.png"></a-sphere>
-      
-<!-- Door -->
-<a-box position="5 0.75 6.01" width="1" height="1.5" depth="0.1" src="door.png"></a-box>
-      
+      <!-- Mushroom 6 -->
+      <a-box position="18 1.5 -2" width="2" height="3" depth="2" src="stem.png"></a-box>
+      <a-sphere position="18 4.7 -2" radius="2.5" src="loa.png"></a-sphere>
+      <a-box position="18 0.75 -0.99" width="1" height="1.5" depth="0.1" src="door.png"></a-box>
 
-<a-box position="-3 1.5 8" width="2" height="3" depth="2" src="stem.png"></a-box>
-      
-<!-- Mushroom cap -->
-<a-sphere position="-3 4.7 8" radius="2.5" src="mush.png"></a-sphere>
+      <!-- Mushroom 7 -->
+      <a-box position="-15 1.5 3" width="2" height="3" depth="2" src="stem.png"></a-box>
+      <a-sphere position="-15 4.7 3" radius="2.5" src="loa.png"></a-sphere>
+      <a-box position="-15 0.75 4.01" width="1" height="1.5" depth="0.1" src="door.png"></a-box>
 
-      
-<!-- Door -->
-<a-box position="-3 0.75 9.01" width="1" height="1.5" depth="0.1" src="door.png"></a-box>
+      <!-- Toad -->
+      <a-box position="10 3 6.4" width="1" height=".7" depth="1" src="toad.png"></a-box>
 
-<a-box position="10 3 6.4" width="1" height=".7" depth="1" src="toad.png"></a-box>
+      <!-- Road -->
+      <a-box position="10 0 -8" width="50" height=".05" depth="4" src="road.png" rotation="0 90 0"></a-box>
 
-<a-box position="10 0 -8" width="50" height=".05" depth="4" src="road.png" rotation="0 90 0"></a-box>
-
-
-<!-- RED CAR -->
-      <a-entity position="10 1.5 6.4"  rotation="0 -90 0">
-      <a-box position="0 0 0">
-        <!-- Body -->
-        <a-box position="0 0 0" width="4" height="1" depth="2.5" color="#C00000"></a-box>
-        <!-- Hood -->
-        <a-box position="1 0.3 0" width="1.5" height="0.5" depth="2.5" color="#8B0000"></a-box>
-        <!-- Windshield -->
-        <a-box position="1 0.7 0" width=".5" height="0.3" depth="2" color="#ADD8E6" rotation="0 0 -45"></a-box>
-        <!-- Spoiler -->
-        <a-box position="-2 1 0" width="0.2" height="0.3" depth="2" color="#800000"></a-box>
-        <!-- Wheels -->
-        <a-cylinder position="-1.5 -0.8 -1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
-        <a-cylinder position="-1.5 -0.8 1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
-        <a-cylinder position="1.5 -0.8 -1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
-        <a-cylinder position="1.5 -0.8 1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
-        <!-- Headlights -->
-        <a-sphere position="2.1 0 -0.7" radius="0.3" color="#FFFF99"></a-sphere>
-        <a-sphere position="2.1 0 0.7" radius="0.3" color="#FFFF99"></a-sphere>
-        <!-- Taillights -->
-        <a-box position="-2 0 -0.7" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
-        <a-box position="-2 0 0.7" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
-      </a-box>
-
+      <!-- RED CAR -->
+      <a-entity position="10 1.5 6.4" rotation="0 -90 0">
+        <a-box position="0 0 0">
+          <!-- Body -->
+          <a-box position="0 0 0" width="4" height="1" depth="2.5" color="#C00000"></a-box>
+          <!-- Hood -->
+          <a-box position="1 0.3 0" width="1.5" height="0.5" depth="2.5" color="#8B0000"></a-box>
+          <!-- Windshield -->
+          <a-box position="1 0.7 0" width=".5" height="0.3" depth="2" color="#ADD8E6" rotation="0 0 -45"></a-box>
+          <!-- Spoiler -->
+          <a-box position="-2 1 0" width="0.2" height="0.3" depth="2" color="#800000"></a-box>
+          <!-- Wheels -->
+          <a-cylinder position="-1.5 -0.8 -1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+          <a-cylinder position="-1.5 -0.8 1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+          <a-cylinder position="1.5 -0.8 -1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+          <a-cylinder position="1.5 -0.8 1" radius="0.6" height="0.4" rotation="90 0 0" color="#000"></a-cylinder>
+          <!-- Headlights -->
+          <a-sphere position="2.1 0 -0.7" radius="0.3" color="#FFFF99"></a-sphere>
+          <a-sphere position="2.1 0 0.7" radius="0.3" color="#FFFF99"></a-sphere>
+          <!-- Taillights -->
+          <a-box position="-2 0 -0.7" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
+          <a-box position="-2 0 0.7" width="0.2" height="0.3" depth="0.3" color="#FF0000"></a-box>
+        </a-box>
       </a-entity>
 
-      
-
-      
-
-
-
-
-      
-      
-
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
 </html>
