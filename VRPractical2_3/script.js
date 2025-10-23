@@ -9,35 +9,20 @@ window.addEventListener("DOMContentLoaded",function() {
     let z = rnd(-20,20);
     let tree = new Tree(x, 0 , z);
   }
+  for(let i = 0; i <50; i++){
+    let x = rnd(-20,20);
+    let z = rnd(-20,20);
+    let house = new House(x, z);
+  }
+  for(let i = 0; i <100; i++){
+    let x = rnd(-20,20);
+    let y = rnd(15,25);
+    let z = rnd(-20,20);
+    let cloud = new Cloud(x, y , z);
+  }
 
-})
+});
 
-class Cloud{
-  constructor(x,y,z){
-    this.obj = document.createElement("a-entity");
-
-    let puff1 = document.createElement("a-sphere");
-    puff1.setAttribute("color","white");
-    puff1.setAttribute("position","0 0 0");
-    puff1.setAttribute("radius","1");
-    this.obj.append( puff1 );
-
-    let puff2 = document.createElement("a-sphere");
-    puff2.setAttribute("color","white");
-    puff2.setAttribute("position","1 0.5 0");
-    puff2.setAttribute("radius","1.25");
-    this.obj.append( puff2 );
-
-    let puff3 = document.createElement("a-sphere");
-    puff3.setAttribute("color","white");
-    puff3.setAttribute("position","-1 0.5 0");
-    puff3.setAttribute("radius","1");
-    this.obj.append( puff3 );
-
-    this.obj.setAttribute("position",{x:x, y:y, z:z});
-    scene.append( this.obj )
-}
-}
 
 class House{
   constructor(x,z){
@@ -64,4 +49,29 @@ class House{
     scene.append( this.obj )
   }
 }
+class Cloud{
+  constructor(x,y,z){
+    this.obj = document.createElement("a-entity");
 
+    let puff1 = document.createElement("a-sphere");
+    puff1.setAttribute("color","white");
+    puff1.setAttribute("position","0 0 0");
+    puff1.setAttribute("radius","1");
+    this.obj.append( puff1 );
+
+    let puff2 = document.createElement("a-sphere");
+    puff2.setAttribute("color","white");
+    puff2.setAttribute("position","1 0.5 0");
+    puff2.setAttribute("radius","1.25");
+    this.obj.append( puff2 );
+
+    let puff3 = document.createElement("a-sphere");
+    puff3.setAttribute("color","white");
+    puff3.setAttribute("position","-1 0.5 0");
+    puff3.setAttribute("radius","1");
+    this.obj.append( puff3 );
+
+    this.obj.setAttribute("position",{x:x, y:y, z:z});
+    scene.append( this.obj )
+}
+}
