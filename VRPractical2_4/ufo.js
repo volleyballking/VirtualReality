@@ -14,7 +14,7 @@ class UFO {
     lowerDisk.setAttribute("radius-top", "2.5");
     lowerDisk.setAttribute("height", "1");
     lowerDisk.setAttribute("rotation", "180 0 0");
-    lowerDisk.setAttribute("color", "gray");
+    lowerDisk.setAttribute("color", "green");
     this.obj.append(lowerDisk);
 
     let middleRing = document.createElement("a-torus");
