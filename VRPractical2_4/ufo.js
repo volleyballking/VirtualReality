@@ -63,7 +63,7 @@ class UFO {
     beam.setAttribute("radius-bottom", "5");
     beam.setAttribute("radius-top", "0.3");
     beam.setAttribute("height", "30");
-    beam.setAttribute("color", "yellow");
+    beam.setAttribute("color", "green");
     beam.setAttribute("opacity", "0.25");
     this.obj.append(beam);
 
