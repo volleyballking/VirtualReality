@@ -22,7 +22,7 @@ class UFO {
     middleRing.setAttribute("radius-tubular", "0.3");
     middleRing.setAttribute("rotation", "90 0 0");
     middleRing.setAttribute("position", "0 0.5 0");
-    middleRing.setAttribute("color", "black");
+    middleRing.setAttribute("color", "purple");
     this.obj.append(middleRing);
 
     let upperHull = document.createElement("a-cone");
@@ -30,7 +30,7 @@ class UFO {
     upperHull.setAttribute("radius-top", "0.8");
     upperHull.setAttribute("height", "1.2");
     upperHull.setAttribute("position","0 0.7 0");
-    upperHull.setAttribute("color", "gray");
+    upperHull.setAttribute("color", "green");
     this.obj.append(upperHull);
 
     let dome = document.createElement("a-sphere");
@@ -45,7 +45,7 @@ class UFO {
     domeFrame.setAttribute("radius-tubular", "0.05");
     domeFrame.setAttribute("position", "0 1.4 0");
     domeFrame.setAttribute("rotation", "90 0 0");
-    domeFrame.setAttribute("color", "black");
+    domeFrame.setAttribute("color", "purple");
     this.obj.append(domeFrame);
 
     let underGlow = document.createElement("a-torus");
