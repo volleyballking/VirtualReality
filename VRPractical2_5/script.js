@@ -11,19 +11,24 @@
 */
 
 let maze = [
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+  "-----C------G-------G-----",
+  "T-BBBBB--BBBBBBBBBBBBBBB-T",
+  "T-B----B-------B--G----B-T",
+  "T-B--B-B-BSBB--B-BBBBG-B-T",
+  "T-B-B-G--B-G--BB---B---B-T",
+  "T-B-BSBB-B-BBB-G--BBBB-B-T",
+  "T-B------B--B-S--B----BB-T",
+  "T-BBBBBB-BBBSBBBB-B-B--B-T",
+  "T-B---S--B--G--B--B-B--B-T",
+  "T-B--BBB-B-BBBBB--B-B--B-T",
+  "T-B----B-B--S---B--G-B-B-T",
+  "T-B-BB-BBB---BB-BBBB-B-B-T",
+  "T-B-BB--G-S----B---------T",
+  "T-BBBBBBBBBBBBBBBBBBB-BBB-",
+  "TTTTTTTTTTTTTTTTTTT-G-TT-"
 ];
+
+let ghosts = [];
 
 /* Challenge 2
    Add appropriate classes to use as objects in your map.  Choose characters to represent these objects and position them on the map.   In Challenge 5 and 6, you will generate the map using the character representation of the objects you chose to place in the world. Get Creative!
@@ -37,10 +42,50 @@ window.addEventListener("DOMContentLoaded",function() {
     /* Challenge 3
       Choose a technique to traverse the each character in the string.
     */ 
+  
     /* Challenge 4
        Make an appropriate decision based on the characters you chose to enter 
        in the maze.  Create an instance of the corresponding object.
     */
+
+    let row = maze[r];
+    for (let c=0; c< row.length;c++){
+     let ch = row[c];
+
+     let x=c;
+     let z=-r;
+     let y=0.5;
+
+     if (ch =="B"){
+      new Block(x,y,z);
+    }
+      if (ch=="T"){
+      new Tree(x,y,z);
+    }
+
+    if (ch =="S"){
+      new Treasure(x,y,z);
+    }
+
+    if (ch =="C"){
+      new Sign(x,1,z);
+    }
+
+    if (ch =="G"){
+      let g = new Ghost(x,y,z);
+      ghosts.push(g);
+    }
+   }
   }
 
+
+  loop();
+
 })
+
+function loop(){
+  for (let g of ghosts){
+    g.move();
+  }
+  requestAnimationFrame(loop);
+}
