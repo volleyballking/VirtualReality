@@ -1,29 +1,20 @@
-let scene;
-let snowmen = [];
-let ufos = [];
-let snowflakes=[];
+let scene, car1;
+
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene")
+  car1 = new Car(-4,0,-5);
 
-  for(let i = 0; i < 20; i++){
-    snowmen.push(new Snowman(rnd(-20, 20), 0, rnd(-20, 20)));
-  }
 
-  for(let i = 0; i < 3; i++){
-    ufos.push(new UFO(rnd(-20, 20), 10, rnd(-20, 20)));
-  }
-
-  for(let i = 0; i < 100; i++){
-    let x = rnd(-20,20);
-    let z = rnd(-20,20);
-    let snowflake = new Snowflake(x,z);
-    snowflakes.push(snowflake);
-  }
-     
+      
   loop();
 })
 
+function loop(){
+  car1.drive();
+    
+  window.requestAnimationFrame(loop);
+}
 
 function loop(){
 
